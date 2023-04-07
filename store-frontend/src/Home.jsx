@@ -14,12 +14,20 @@ export function Home() {
     });
   };
 
+  const handleCreateProduct = (params, successCallback) => {
+    console.log("TEST HANDLE CREATE PRODUCT", params);
+    axios.post("http://localhost:3000/products.json", params).then((response) => {
+      setProducts([...products, response.data]);
+      successCallback();
+    });
+  };
+
   useEffect(handleIndexProducts, []);
 
   return (
     <div>
       <h1>Sara's Lab</h1>
-      <ProductsNew />
+      <ProductsNew onCreateProduct={handleCreateProduct} />
       <ProductsIndex products={products} />
     </div>
   );
