@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { ProductsIndex } from "./ProductsIndex";
+import { ProductsNew } from "./ProductsNew";
 
 export function Home() {
   const [products, setProducts] = useState([]);
@@ -18,6 +19,7 @@ export function Home() {
   return (
     <div>
       <h1>Sara's Lab</h1>
+      <ProductsNew />
       <ProductsIndex products={products} />
     </div>
   );
