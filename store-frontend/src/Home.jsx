@@ -17,7 +17,7 @@ export function Home() {
 
   return (
     <div>
-      <h1>Welcome to React!</h1>
+      <h1>Sara's Lab</h1>
       <ProductsIndex products={products} />
     </div>
   );
