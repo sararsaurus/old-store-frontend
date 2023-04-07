@@ -4,7 +4,7 @@ export function Home() {
   return (
     <div>
       <h1>Welcome to React!</h1>
-      <ProductsIndex />
+      <ProductsIndex products={products} />
     </div>
   );
 }
